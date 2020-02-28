@@ -4,7 +4,7 @@ pipeline {
     stage('Upload to AWS') {
       steps {
         withAWS(credentials:'Jenkins'){
-        s3Upload(file:'index.html', bucket:'udacity-muddge-project-4')
+        s3Upload(file:'index.html', bucket:'udacity-muddge-project-4', path:'.')
         }
       }
     }
